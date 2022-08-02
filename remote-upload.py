@@ -9,6 +9,6 @@ password = input("Enter password: ")
 
 c = ftpretty(host, username, password)
 
-c.get()
+c.get('someremote/file/on/server.txt', '/tmp/localcopy/server.txt')
 
-c.put()
+c.put('/tmp/localcopy/data.txt', 'someremote/file/on/server.txt')
